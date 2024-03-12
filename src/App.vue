@@ -1,38 +1,30 @@
-<script lang="ts" setup>
-import { onMounted, computed } from "vue";
-import { useLayoutStore } from "@/store/layout";
-import { setAttribute } from "@/app/utils";
-
-const layoutStore = computed(() => useLayoutStore());
-
-onMounted(() => {
-  const {
-    mode,
-    layoutType,
-    layoutWidth,
-    topBarColor,
-    sideBarSize,
-    sideBarColor,
-    dir,
-    skinLayout,
-    navType
-  } = layoutStore.value;
-
-  setAttribute("data-mode", mode);
-  setAttribute("data-topbar", topBarColor);
-  setAttribute("data-sidebar", sideBarColor);
-  setAttribute("data-layout", layoutType);
-  setAttribute("data-skin", skinLayout);
-  setAttribute("dir", dir);
-  setAttribute("data-content", layoutWidth);
-  setAttribute("data-sidebar-size", sideBarSize);
-  setAttribute("data-navbar", navType);
-});
+<script setup>
+import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <component v-if="$route.meta.layout" :is="$route.meta.layout">
-    <router-view />
-  </component>
-  <router-view v-else />
+  <div>
+    <a href="https://vitejs.dev" target="_blank">
+      <img src="/vite.svg" class="logo" alt="Vite logo" />
+    </a>
+    <a href="https://vuejs.org/" target="_blank">
+      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
+    </a>
+  </div>
+  <HelloWorld msg="Vite + Vue" />
 </template>
+
+<style scoped>
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.vue:hover {
+  filter: drop-shadow(0 0 2em #42b883aa);
+}
+</style>
