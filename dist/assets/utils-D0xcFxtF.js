@@ -1,0 +1,1 @@
+import{F as o}from"./facebook-GY_so4gn.js";import{M as r}from"./index-Bm63Dp3b.js";import{T as i}from"./twitter-dcwqlhEu.js";import{G as c}from"./github-DiHmMoY2.js";const l=[{icon:o,color:"custom"},{icon:r,color:"orange"},{icon:i,color:"sky"},{icon:c,color:"slate"}];export{l as s};
