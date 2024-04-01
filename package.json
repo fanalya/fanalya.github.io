@@ -1,0 +1,19 @@
+{
+  "name": "fanalya.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "assets/src/js/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx tailwindcss -i ./assets/src/css/theme.css -o ./assets/dist/css/style.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "flowbite": "^2.3.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.3"
+  }
+}
